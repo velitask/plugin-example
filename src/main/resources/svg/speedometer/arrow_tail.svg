@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style><![CDATA[
+    .tail { fill: none; stroke: rgba(103,136,166,0.7); stroke-width: 6; }
+  ]]></style>
+  <circle class="tail" cx="100" cy="100" r="70"/>
+</svg>

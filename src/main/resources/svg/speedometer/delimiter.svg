@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style><![CDATA[
+    .tick-major { stroke: #ffffff; stroke-width: 2; stroke-linecap: round; }
+    .tick-minor { stroke: rgba(255,255,255,0.6); stroke-width: 1; stroke-linecap: round; }
+  ]]></style>
+
+  <g transform="translate(100,100)">
+    <g>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(45)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(90)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(135)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(180)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(225)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(270)"/>
+      <line class="tick-major" x1="0" y1="-85" x2="0" y2="-75" transform="rotate(315)"/>
+    </g>
+    <g>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(9)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(18)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(27)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(36)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(54)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(63)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(72)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(81)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(99)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(108)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(117)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(126)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(144)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(153)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(162)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(171)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(189)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(198)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(207)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(216)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(234)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(243)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(252)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(261)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(279)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(288)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(297)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(306)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(324)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(333)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(342)"/>
+      <line class="tick-minor" x1="0" y1="-85" x2="0" y2="-80" transform="rotate(351)"/>
+    </g>
+  </g>
+</svg>

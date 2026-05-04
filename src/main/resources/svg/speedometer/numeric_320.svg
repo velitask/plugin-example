@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style><![CDATA[
+    .number { fill: #ffffff; font-family: sans-serif; font-size: 14px; font-weight: bold; }
+  ]]></style>
+  <text class="number" x="100.00" y="35.00" text-anchor="middle" dominant-baseline="central">0</text>
+  <text class="number" x="145.96" y="54.04" text-anchor="middle" dominant-baseline="central">40</text>
+  <text class="number" x="165.00" y="100.00" text-anchor="middle" dominant-baseline="central">80</text>
+  <text class="number" x="145.96" y="145.96" text-anchor="middle" dominant-baseline="central">120</text>
+  <text class="number" x="100.00" y="165.00" text-anchor="middle" dominant-baseline="central">160</text>
+  <text class="number" x="54.04" y="145.96" text-anchor="middle" dominant-baseline="central">200</text>
+  <text class="number" x="35.00" y="100.00" text-anchor="middle" dominant-baseline="central">240</text>
+  <text class="number" x="54.04" y="54.04" text-anchor="middle" dominant-baseline="central">280</text>
+</svg>
