@@ -8,6 +8,10 @@ public class Plagin implements IPlagin {
 
     public static final String UID = "com.velitask.plugin.example";
 
+    public static final String KEY = "PluginExample";
+
+    public static final String KEY_INDICATOR = KEY + ".Indicator";
+
     @Override
     public String getUID() {
         return UID;
@@ -20,7 +24,7 @@ public class Plagin implements IPlagin {
 
     @Override
     public String[] defineAdditionLocales() {
-        return new String[]{"ru"};
+        return new String[] { "ru" };
     }
 
     public void registerLocalization() {
@@ -30,8 +34,8 @@ public class Plagin implements IPlagin {
 
     @Override
     public IIndicator[] defineIndicators() {
-        return new IIndicator[]{
-            new SpeedometerIndicator()
+        return new IIndicator[] {
+                new SpeedometerIndicator()
         };
     }
 }

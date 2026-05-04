@@ -31,7 +31,7 @@ public class SpeedometerIndicator extends Indicator {
 
     public static final String NAME = "speedometer";
 
-    private static final String KEY = _KEY + "." + NAME;
+    private static final String KEY = Plagin.KEY_INDICATOR + "." + NAME;
 
     private final DistanceSensorProperty mDistance = new DistanceSensorProperty();
 
@@ -49,8 +49,7 @@ public class SpeedometerIndicator extends Indicator {
     }
 
     private static final String SPEED_SCALE = "speedScale";
-    private final EnumArrayProperty<SpeedScale> mSpeedScale
-            = new EnumArrayProperty<>(SpeedScale.class) {
+    private final EnumArrayProperty<SpeedScale> mSpeedScale = new EnumArrayProperty<>(SpeedScale.class) {
         {
             set(SpeedScale.SCALE_160);
         }
@@ -82,29 +81,25 @@ public class SpeedometerIndicator extends Indicator {
     private final ColorProperty mBgColor = new ColorProperty(
             new Color(204, 204, 204, 51),
             BG_COLOR,
-            localized(KEY + "." + BG_COLOR + ".title")
-    );
+            localized(KEY + "." + BG_COLOR + ".title"));
 
     private static final String SCALE_COLOR = "scaleColor";
     private final ColorProperty mScaleColor = new ColorProperty(
             Color.WHITE,
             SCALE_COLOR,
-            localized(KEY + "." + SCALE_COLOR + ".title")
-    );
+            localized(KEY + "." + SCALE_COLOR + ".title"));
 
     private static final String ARROW_FILL_COLOR = "arrowFillColor";
     private final ColorProperty mArrowFillColor = new ColorProperty(
             new Color(0xcc, 0x58, 0x54),
             ARROW_FILL_COLOR,
-            localized(KEY + "." + ARROW_FILL_COLOR + ".title")
-    );
+            localized(KEY + "." + ARROW_FILL_COLOR + ".title"));
 
     private static final String ARROW_STROKE_COLOR = "arrowStrokeColor";
     private final ColorProperty mArrowStrokeColor = new ColorProperty(
             Color.WHITE,
             ARROW_STROKE_COLOR,
-            localized(KEY + "." + ARROW_STROKE_COLOR + ".title")
-    );
+            localized(KEY + "." + ARROW_STROKE_COLOR + ".title"));
 
     private final DoubleProperty mArrowStrokeWidth = new DoubleProperty() {
         @Override
@@ -138,15 +133,15 @@ public class SpeedometerIndicator extends Indicator {
             .bind(".tick-major", "stroke", mScaleColor)
             .bind(".tick-minor", "stroke", mScaleColor);
 
-    private final SvgProperty[] mScaleSvgs = new SvgProperty[]{
-        new SvgProperty("scale40", SVG_PATH + "numeric_40.svg")
-        .bind(".number", "fill", mScaleColor),
-        new SvgProperty("scale80", SVG_PATH + "numeric_80.svg")
-        .bind(".number", "fill", mScaleColor),
-        new SvgProperty("scale160", SVG_PATH + "numeric_160.svg")
-        .bind(".number", "fill", mScaleColor),
-        new SvgProperty("scale320", SVG_PATH + "numeric_320.svg")
-        .bind(".number", "fill", mScaleColor),};
+    private final SvgProperty[] mScaleSvgs = new SvgProperty[] {
+            new SvgProperty("scale40", SVG_PATH + "numeric_40.svg")
+                    .bind(".number", "fill", mScaleColor),
+            new SvgProperty("scale80", SVG_PATH + "numeric_80.svg")
+                    .bind(".number", "fill", mScaleColor),
+            new SvgProperty("scale160", SVG_PATH + "numeric_160.svg")
+                    .bind(".number", "fill", mScaleColor),
+            new SvgProperty("scale320", SVG_PATH + "numeric_320.svg")
+                    .bind(".number", "fill", mScaleColor), };
 
     private final SvgProperty mArrowSvg = new SvgProperty("ArrowSvg", SVG_PATH + "arrow.svg")
             .bind(".arrow-body", "fill", mArrowFillColor)
@@ -184,11 +179,11 @@ public class SpeedometerIndicator extends Indicator {
 
     @Override
     public IProperty[] defineProperties() {
-        return new IProperty[]{
-            mDistance, mSpeedScale,
-            mText, getTemplate(),
-            mBgColor, mScaleColor,
-            mArrowFillColor, mArrowStrokeColor, mArrowStrokeWidth
+        return new IProperty[] {
+                mDistance, mSpeedScale,
+                mText, getTemplate(),
+                mBgColor, mScaleColor,
+                mArrowFillColor, mArrowStrokeColor, mArrowStrokeWidth
         };
     }
 
@@ -204,21 +199,21 @@ public class SpeedometerIndicator extends Indicator {
 
     @Override
     public IndicatorSkin[] defineSkins() {
-        return new IndicatorSkin[]{
-            IndicatorSkin.builder("night", localized(KEY + ".skin.night"))
-            .set(mText.getColor().skin(0xaa, 0xaa, 0xaa))
-            .set(mBgColor.skin(0x11, 0x11, 0x11, 0xaa))
-            .set(mScaleColor.skin(0x88, 0x88, 0x88))
-            .set(mArrowFillColor.skin(0x55, 0x2b, 0x2a))
-            .set(mArrowStrokeColor.skin(0xaa, 0xaa, 0xaa))
-            .build(),
-            IndicatorSkin.builder("racing", localized(KEY + ".skin.racing"))
-            .set(mText.getColor().skin(0xff, 0xff, 0x00))
-            .set(mBgColor.skin(0x11, 0x11, 0x11, 0xcc))
-            .set(mScaleColor.skin(0xff, 0xff, 0x00))
-            .set(mArrowFillColor.skin(0xff, 0x30, 0x30))
-            .set(mArrowStrokeColor.skin(0xff, 0xff, 0x00))
-            .build()
+        return new IndicatorSkin[] {
+                IndicatorSkin.builder("night", localized(KEY + ".skin.night"))
+                        .set(mText.getColor().skin(0xaa, 0xaa, 0xaa))
+                        .set(mBgColor.skin(0x11, 0x11, 0x11, 0xaa))
+                        .set(mScaleColor.skin(0x88, 0x88, 0x88))
+                        .set(mArrowFillColor.skin(0x55, 0x2b, 0x2a))
+                        .set(mArrowStrokeColor.skin(0xaa, 0xaa, 0xaa))
+                        .build(),
+                IndicatorSkin.builder("racing", localized(KEY + ".skin.racing"))
+                        .set(mText.getColor().skin(0xff, 0xff, 0x00))
+                        .set(mBgColor.skin(0x11, 0x11, 0x11, 0xcc))
+                        .set(mScaleColor.skin(0xff, 0xff, 0x00))
+                        .set(mArrowFillColor.skin(0xff, 0x30, 0x30))
+                        .set(mArrowStrokeColor.skin(0xff, 0xff, 0x00))
+                        .build()
         };
     }
 
@@ -301,14 +296,14 @@ public class SpeedometerIndicator extends Indicator {
 
         @Override
         protected Var[] defineVars() {
-            return new Var[]{
-                new Var("curr", "%.0f", localized(KEY_PROPERTY_VAR_CURR))
+            return new Var[] {
+                    new Var("curr", "%.0f", localized(KEY_PROPERTY_VAR_CURR))
             };
         }
 
         public IndicatorSkinTransfer skinFloat() {
             return skin(localized(KEY_PROPERTY_TEMPLATE + ".float"),
-                    new Var[]{new Var("curr", "%.1f", localized(KEY_PROPERTY_VAR_CURR))});
+                    new Var[] { new Var("curr", "%.1f", localized(KEY_PROPERTY_VAR_CURR)) });
         }
     }
 
