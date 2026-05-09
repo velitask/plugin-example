@@ -22,10 +22,11 @@ Restart Velitask — the example indicator becomes available in the indicators p
 
 ## What's inside
 
-- `src/main/java/com/velitask/plugin/example/Plagin.java` — plugin entry point, registered in the manifest.
+- `src/main/java/com/velitask/plugin/example/Plagin.java` — plugin entry point, registered in the manifest. Declares UID, version, locales, and registers the indicator.
 - `src/main/java/com/velitask/plugin/example/SpeedometerIndicator.java` — example indicator that renders a speedometer using SVG assets and a sensor input.
 - `src/main/resources/strings/` — localization files (`strings.properties` + `strings_ru.properties`).
 - `src/main/resources/svg/speedometer/` — SVG assets for the speedometer.
+- `src/main/resources/sql/setup/create.sql` — plugin DB schema (`import_log` table). A minimal smoke test for the [`PluginDatabase`](https://javadoc.jitpack.io/com/github/velitask/velitask-sdk/latest/javadoc/com/velitask/sdk/db/PluginDatabase.html) API. Drop this file (and `Plagin.getDbVersion()`) if your plugin does not need its own DB.
 
 ## How it depends on the SDK
 

@@ -1,8 +1,9 @@
 package com.velitask.plugin.example;
 
+import com.velitask.sdk.IFileSource;
 import com.velitask.sdk.IIndicator;
 import com.velitask.sdk.IPlagin;
-import com.velitask.sdk.i18n.Localization;
+import com.velitask.sdk.db.PluginDatabase;
 
 public class Plagin implements IPlagin {
 
@@ -23,13 +24,13 @@ public class Plagin implements IPlagin {
     }
 
     @Override
-    public String[] defineAdditionLocales() {
-        return new String[] { "ru" };
+    public int getDbVersion() {
+        return 1;
     }
 
-    public void registerLocalization() {
-        Localization.instance().registerBundle(
-                getClass().getClassLoader(), "strings/strings");
+    @Override
+    public String[] defineAdditionLocales() {
+        return new String[] { "ru" };
     }
 
     @Override
@@ -37,5 +38,19 @@ public class Plagin implements IPlagin {
         return new IIndicator[] {
                 new SpeedometerIndicator()
         };
+    }
+
+    @Override
+    public void onSourceImported(IFileSource source, PluginDatabase db) {
+        if (db == null || source == null) {
+            return;
+        }
+        db.execute(
+                "INSERT OR REPLACE INTO ${table:import_log}"
+                + " (source_id, source_path, processed_at) VALUES (?, ?, ?)",
+                source.getId(),
+                source.getRelativePath(),
+                System.currentTimeMillis()
+        );
     }
 }

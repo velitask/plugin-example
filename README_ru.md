@@ -22,10 +22,11 @@ cd plugin-example
 
 ## Что внутри
 
-- `src/main/java/com/velitask/plugin/example/Plagin.java` — точка входа плагина (зарегистрирована в манифесте).
+- `src/main/java/com/velitask/plugin/example/Plagin.java` — точка входа плагина (зарегистрирована в манифесте). Объявляет UID, версию, локали и регистрирует индикатор.
 - `src/main/java/com/velitask/plugin/example/SpeedometerIndicator.java` — пример индикатора, рисует спидометр из SVG-ассетов с привязкой к сенсору.
 - `src/main/resources/strings/` — локализация (`strings.properties` + `strings_ru.properties`).
 - `src/main/resources/svg/speedometer/` — SVG-ассеты спидометра.
+- `src/main/resources/sql/setup/create.sql` — схема собственной БД плагина (таблица `import_log`). Минимальный smoke-тест API [`PluginDatabase`](https://javadoc.jitpack.io/com/github/velitask/velitask-sdk/latest/javadoc/com/velitask/sdk/db/PluginDatabase.html). При форке можно удалить (вместе с `Plagin.getDbVersion()`), если своя БД не нужна.
 
 ## Как зависит от SDK
 
